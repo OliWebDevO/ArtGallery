@@ -1,0 +1,111 @@
+.section-contact {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.contact-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 100px;
+    align-items: center;
+    h3 {
+        color: orange;
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+    }
+}
+.contact-title {
+    text-align: left;
+    width: 50vw;
+}
+.form-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+        width: 50vw;
+        height: 40px;
+        padding: 20px 38px;
+        margin: 10px 0;
+        color: #a5a5a5;
+        font-size: 14px;
+        border: none;
+        background-color: #f8f4f4;
+        border:none ;
+        &:focus {
+          border: 1px solid orange;
+          outline:none;
+        }
+    }
+  }
+  .contact-form {
+    textarea {
+        width: 50vw;
+        height: 150px;
+        padding: 20px 30px;
+        margin: 10px 0;
+        color: #a5a5a5;
+        font-size: 14px;
+        background-color: #f8f4f4;
+        border:none ;
+        &:focus {
+          border: 1px solid orange;
+          outline:none;
+        }
+      }
+      .form-send {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 60px;
+        margin: 10px 0;
+        color: white;
+        font-size: 14px;
+        background-color: orange;
+        border:none ;
+        &:focus {
+          border: 1px solid orange;
+          outline:none;
+        }
+        &:hover {
+            background-color: rgba(255, 166, 0, 0.808);
+        }
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+    }
+      
+  }
+
+  
+
+  
+  .parrallax {
+    height: 50vh;
+    margin-top: 100px;
+    .parrallax-img {
+        position: relative;
+        height: 50vh;
+        background: url("../img/hero2.jpg") center / cover ;
+        background-attachment: fixed;
+        &::before {
+            content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.564);
+        z-index: 1;
+        }
+    }
+
+}

@@ -1,0 +1,93 @@
+.gallery {
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
+    img {
+        transition: ease-in-out .9s;
+        }
+}	
+@media (max-width: 1400px) {
+.gallery {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    }
+}
+@media (max-width: 900px) {
+.gallery {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    } 
+}
+@media (max-width: 700px) {
+.gallery {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    } 
+}
+.gallery img{ width: 100%; padding: 7px 0;}
+@media (max-width: 500px) {
+.gallery {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    }
+}
+.gallerySwitchSmall {
+    img { object-fit: cover;
+          object-position: center;
+          max-width: 60vw; 
+          margin: 7px 0 7px 10vw;
+          max-height: 80vh;
+          transition: ease-in-out .9s;
+            }
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+   
+}
+.gallerySwitch {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    img {
+        padding: 6px 1px;
+        transition: ease-in-out .9s;
+        }
+}
+
+.hide {
+    // display: none;
+    transform: scale(0);
+    opacity: 0;
+    transition: ease-in-out .9s;
+}
+.destroy {
+    display: none;
+}
+
+
+.gallery-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+.gal {
+    border-radius: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        transition: ease-in-out 0.5s;
+}
+.active {
+    transition: ease-in-out 0.5s;
+    background-color: #130d05;
+    border: none;
+    scale: 1.1;
+    color: white;
+    border-radius: 5px;
+}

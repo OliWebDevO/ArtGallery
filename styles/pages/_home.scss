@@ -1,0 +1,218 @@
+// Section One
+
+// .one{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+.s1-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s1-imgs {
+    width: 37.5vw;
+    height: 100vh;
+    margin-right: 2.5vw;
+    position :relative;
+    img {
+        border-radius: 5px;
+    }
+}
+.s1-txt{
+    margin-left: 2.5vw;
+    width: 37.5vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.s2{
+    margin-left: 0;
+    margin-right: 2.5vw;
+}
+.s1-img1{
+    position: absolute; 
+    z-index: -2;
+    top: 20px;
+    right: 0;
+    width: 250px;
+}
+.s1-img2{
+    position: absolute;
+    z-index: -2;
+    top: 150px;
+    right: 280px;   
+    width: 250px;
+}
+.s1-img3{
+    position: absolute; 
+    z-index: -2;
+    top: 20px;
+    left: 40px;
+    width: 250px;
+}
+.s1-img4{
+    position: absolute;
+    z-index: -2;
+    top: 150px;
+    left: 320px;   
+    width: 250px;
+}
+.s1-form1{
+    position: absolute;
+    z-index: -3;
+    top: 100px;
+    right: 150px;   
+    width: 250px;
+    height: 320px;
+    background-color: rgba(255, 166, 0, 0.876);
+}
+.s1-form2{
+    position: absolute;
+    z-index: -4;
+    top: 75px;
+    right: 125px;   
+    width: 300px;
+    height: 370px;
+    background-color: rgba(255, 166, 0, 0.226);
+}
+.s1-form3{
+    position: absolute;
+    z-index: -3;
+    top: 100px;
+    left: 190px;   
+    width: 250px;
+    height: 320px;
+    background-color: rgba(255, 166, 0, 0.876);
+}
+.s1-form4{
+    position: absolute;
+    z-index: -4;
+    top: 75px;
+    left: 165px;   
+    width: 300px;
+    height: 370px;
+    background-color: rgba(255, 166, 0, 0.226);
+}
+.twoo {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80vw;
+}
+.two-img-box {
+    cursor: pointer;
+    img {
+        height: 300px;
+        width: 250px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px 5px 0 0;
+    }
+    &:hover img {
+            opacity:0.9;
+    }
+    .two-text {
+        border-radius: 0 0 5px 5px;
+        a {
+            font-family: "Roboto", sans-serif;
+            color: black;
+            transition: ease-in-out .5s;
+            &:hover{
+                color: orange;
+                transition: ease-in-out .5s;
+            }
+        }
+    }
+}
+.two-img-box .two-text {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+.two-img-box .two-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 166, 0, 0.065);
+    transition: .5s;
+    border-radius: 0 0 5px 5px;
+    a {
+        line-height: 25px;
+       
+    }
+}
+.two-img-box:hover .two-title {
+    top: -100px;
+}
+
+.two-img-box .two-fade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: orange;
+    transition: .5s;
+    
+    i {
+        font-size: 20px;
+        color: white;
+        transition: .3s;
+        &:hover {
+            color: black;
+            transition: .3s;
+        }
+    }
+}
+
+.two-img-box:hover .two-fade {
+    top: 0;
+}
+
+// .two-fade {
+//     display: none;
+//     position: absolute;
+//     background-color: orange;
+//     width: 250px;
+//     height: 75px;
+//     bottom: 0px;
+//     left: 0;
+//     border-radius: 0 0 8px 8px;
+//     transition: ease-in-out 2s;
+    
+// }
+// .two-img-box:hover .two-fade {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     -webkit-animation-duration: .5s;
+//     animation-duration: .5s;
+//     -webkit-animation: fadeInUp .5s;
+//     animation: fadeInUp .5s;
+//     transition: ease-in-out 2s;
+// }
+// .two-img-box:hover .two-text a {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     -webkit-animation-duration: .5s;
+//     animation-duration: .5s;
+//     -webkit-animation: fadeOutUp .5s;
+//     animation: fadeOutUp .5s;
+//     transition: ease-in-out 2s;
+// }
