@@ -103,8 +103,10 @@
     width: 80vw;
 }
 .two-img-box {
+    position: relative;
     cursor: pointer;
     img {
+        display: block;
         height: 300px;
         width: 250px;
         object-fit: cover;
@@ -153,10 +155,57 @@
        
     }
 }
+.img-box-absolut{
+    
+    img  {  
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        left: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .icon-inside {
+        position: absolute;
+        z-index: 2;
+        top: 13px;
+        left: 13px;
+        font-size: 15px;
+    }
+    .box-icon-like {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        height: 40px;
+        width:40px;
+        background-color: rgba(255, 255, 255, 0.322);
+        border-radius: 50%;
+        a {text-decoration: none;
+        color: white;}
+    }
+    .box-icon-list {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 60px;
+        height: 40px;
+        width:40px;
+        background-color: rgba(255, 255, 255, 0.322);
+        border-radius: 50%;
+        a {text-decoration: none;
+        color: white;}
+    }
+
+
+}
 .two-img-box:hover .two-title {
     top: -100px;
 }
-
+.two-img-box:hover .two-fade {
+    top: 0;
+}
 .two-img-box .two-fade {
     position: absolute;
     width: 100%;
@@ -180,39 +229,3 @@
     }
 }
 
-.two-img-box:hover .two-fade {
-    top: 0;
-}
-
-// .two-fade {
-//     display: none;
-//     position: absolute;
-//     background-color: orange;
-//     width: 250px;
-//     height: 75px;
-//     bottom: 0px;
-//     left: 0;
-//     border-radius: 0 0 8px 8px;
-//     transition: ease-in-out 2s;
-    
-// }
-// .two-img-box:hover .two-fade {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     -webkit-animation-duration: .5s;
-//     animation-duration: .5s;
-//     -webkit-animation: fadeInUp .5s;
-//     animation: fadeInUp .5s;
-//     transition: ease-in-out 2s;
-// }
-// .two-img-box:hover .two-text a {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     -webkit-animation-duration: .5s;
-//     animation-duration: .5s;
-//     -webkit-animation: fadeOutUp .5s;
-//     animation: fadeOutUp .5s;
-//     transition: ease-in-out 2s;
-// }

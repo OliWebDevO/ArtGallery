@@ -91,3 +91,13 @@
     color: white;
     border-radius: 5px;
 }
+.gallery-img-box {
+    position: relative;
+}
+.img-box-absolut{
+    img {
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+    }
+}
