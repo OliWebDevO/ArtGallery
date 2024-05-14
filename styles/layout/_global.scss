@@ -33,14 +33,18 @@ a {
 i:hover {
     color: rgba(255, 166, 0, 0.619);
 }
-.one {
-    margin-top: 300px;
-}
+
 .home section {
-    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 150px 0;
+}
+.section-title {
+    font-size: 28px;
+    span {
+        color: orange;
+    }
 }
 .hero-page {
         height: 40vh;

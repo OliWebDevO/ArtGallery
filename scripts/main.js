@@ -9,7 +9,15 @@ function topFunction() {
 
 
 // simple gallery
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+
+var lightbox1 = new SimpleLightbox('.gallery a', { /* options */ });
+var lightbox2 = new SimpleLightbox('.grid-imgs a', { /* options */ });
+
+
+// let gallery = new SimpleLightbox('.gallery a');
+// gallery.on('show.simplelightbox', function () {
+// 	// do something…
+// });
 
 // Lenis
 
@@ -92,8 +100,51 @@ backToTop.addEventListener('click', ()=>{
   window.scrollTo({top: 0, behavior: "smooth"});
 })
 
-
-
+// // Default options
+// const options = {
+//   animationDuration: 0.5, // in seconds
+//   callbacks: { 
+//     onFilteringStart: function() { },
+//     onFilteringEnd: function() { },
+//     onShufflingStart: function() { },
+//     onShufflingEnd: function() { },
+//     onSortingStart: function() { },
+//     onSortingEnd: function() { }
+//   },
+//   controlsSelector: '', // Selector for custom controls
+//   delay: 0, // Transition delay in ms
+//   delayMode: 'progressive', // 'progressive' or 'alternate'
+//   easing: 'ease-out',
+//   filter: 'all', // Initial filter
+//   filterOutCss: { // Filtering out animation
+//     opacity: 0,
+//     transform: 'scale(0.5)'
+//   },
+//   filterInCss: { // Filtering in animation
+//     opacity: 0,
+//     transform: 'scale(1)'
+//   },
+//   gridItemsSelector: '.filtr-container',
+//   gutterPixels: 0, // Items spacing in pixels
+//   layout: 'sameSize', // See layouts
+//   multifilterLogicalOperator: 'or',
+//   searchTerm: '',
+//   setupControls: true, // Should be false if controlsSelector is set 
+//   spinner: { // Configuration for built-in spinner
+//     enabled: false,
+//     fillColor: '#2184D0',
+//     styles: {
+//       height: '75px',
+//       margin: '0 auto',
+//       width: '75px',
+//       'z-index': 2,
+//     },
+//   },
+// } 
+// const filterizr = new Filterizr('.gallery-section', options);
+// document.querySelector('.filterizr-filter').addEventListener('click', ()=> {
+//   filterizr.filter(targetFilter);
+// })
 // Filterizr
 
 // document.querySelector('body').ready(function() {
@@ -116,7 +167,6 @@ backToTop.addEventListener('click', ()=>{
 // BTN ACTIF
 	
 let container = document.querySelector('.gallery-btns');
-
 container.addEventListener('click', (event)=> {
   
 // On check si on est bien sur un bouton
@@ -132,42 +182,94 @@ if (event.target.classList.contains('gal')) {
         }
         // Si mon wrapper n'a aucun enfant qui a la classe active alors ... 
         event.target.classList.add('active')
-        var selector = event.target.getAttribute('data-filter')
+
+       let selector = event.target.getAttribute('data-filter')
             // console.log(selector)
-            let imgs = document.querySelectorAll('.gallery img')
+            let imgs = document.querySelectorAll('.gallery-img-box')
             imgs.forEach(img => {
               if (selector === '*') {
                 img.classList.remove('hide')
-                setTimeout(() => {
-                  img.classList.remove('destroy')
-                }, "800");
-                document.querySelector('.gallery').classList.remove('gallerySwitchSmall')
+                // setTimeout(() => {
+                //   img.classList.remove('destroy')
+                // }, "1");
                 document.querySelector('.gallery').classList.remove('gallerySwitch')
               } else if (img.getAttribute('data-filter') !== selector) {
                 img.classList.add('hide')
-                setTimeout(() => {
-                  img.classList.add('destroy')
-                }, "800");
-                if (event.target.getAttribute('data-filter') === '2020'){
-                  document.querySelector('.gallery').classList.remove('gallerySwitch')
-                  document.querySelector('.gallery').classList.add('gallerySwitchSmall')
-                } else { 
-                  document.querySelector('.gallery').classList.remove('gallerySwitchSmall')
+                // setTimeout(() => {
+                //   img.classList.add('destroy')
+                // }, "1");
+                if (event.target.getAttribute('data-filter')) { 
                   document.querySelector('.gallery').classList.add('gallerySwitch')
                 }
               } else {
-                
                   img.classList.remove('hide')
-                  setTimeout(() => {
-                    img.classList.remove('destroy')
-                  }, "800");
-                  
+                  // setTimeout(() => {
+                  //   img.classList.remove('destroy')
+                  // }, "1"); 
               }
             })
             // if (selector != document.querySelector('.gallery img').getAttribute('data-filter')) {document.querySelector('.gallery img').classList.add('hide') }
      } 
 }
 });
+
+
+
+
+// let container = document.querySelector('.gallery-btns');
+// container.addEventListener('click', (event)=> {
+  
+// // On check si on est bien sur un bouton
+// if (event.target.classList.contains('gal')) {
+//     // On vérifie si le bouton a déjà une classe active
+//     if (event.target.classList.contains('active')) {
+//         event.target.classList.remove('active') 
+//         // On vérifie si l'élément cliqué n'a pas déjà une classe active 
+//     } else {
+//         // Si mon container a un autre enfant que celui sur lequel je suis en train de cliquer qui possède déjà la classe active
+//         if (container.querySelector('.active')) {
+//             container.querySelector('.active').classList.remove('active') 
+//         }
+//         // Si mon wrapper n'a aucun enfant qui a la classe active alors ... 
+//         event.target.classList.add('active')
+
+//        let selector = event.target.getAttribute('data-filter')
+//             // console.log(selector)
+//             let imgs = document.querySelectorAll('.gallery-img-box')
+//             imgs.forEach(img => {
+//               if (selector === '*') {
+//                 img.classList.remove('hide')
+//                 // setTimeout(() => {
+//                 //   img.classList.remove('destroy')
+//                 // }, "800");
+//                 document.querySelector('.gallery').classList.remove('gallerySwitchSmall')
+//                 document.querySelector('.gallery').classList.remove('gallerySwitch')
+//               } else if (img.getAttribute('data-filter') !== selector) {
+//                 img.classList.add('hide')
+//                 // setTimeout(() => {
+//                 //   img.classList.add('destroy')
+//                 // }, "800");
+//                 if (event.target.getAttribute('data-filter') === '2020'){
+//                   document.querySelector('.gallery').classList.remove('gallerySwitch')
+//                   document.querySelector('.gallery').classList.add('gallerySwitchSmall')
+//                 } else { 
+//                   document.querySelector('.gallery').classList.remove('gallerySwitchSmall')
+//                   document.querySelector('.gallery').classList.add('gallerySwitch')
+//                 }
+//               } else {
+                
+//                   img.classList.remove('hide')
+//                   // setTimeout(() => {
+//                   //   img.classList.remove('destroy')
+//                   // }, "800");
+                  
+//               }
+//             })
+//             // if (selector != document.querySelector('.gallery img').getAttribute('data-filter')) {document.querySelector('.gallery img').classList.add('hide') }
+//      } 
+// }
+// });
+
 
 
 
