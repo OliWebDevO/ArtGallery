@@ -6,7 +6,7 @@
         transition: ease-in-out .9s;
         }
 }	
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
 .gallery {
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
@@ -114,15 +114,23 @@
         }
 
 }
-
+.gallery-img-box:hover .gallery-box-category {
+    display: flex;
+    transition: ease-in-out .3s;
+    transform: scale(1);
+    opacity: 1;
+}
 .gallery-box-category {
     position: absolute;
     bottom: 14px;
     left: 5px;
     z-index: 2;
     display: flex; 
+    transform: scale(0);
+    opacity: 0;
     flex-wrap: wrap;
     width: 95%;
+    transition: ease-in-out .3s;
     a{
     color: white;
     font-size: 0.8rem;

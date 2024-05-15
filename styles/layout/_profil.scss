@@ -1,0 +1,109 @@
+.profil .hero-page {
+    position: relative;
+    .p-user-img {
+        z-index: 3;
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-position: center;
+        object-fit: cover;
+        border: 4px solid white;
+        top :30vh;
+        left: 10vw;
+    }
+}
+
+.profil-intro {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.profil-infos {
+    margin-top: 50px;
+    width: 27.5vw;
+    
+    .profil-description {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: justify;
+        line-height: 1.4;
+    }
+}
+.p-infos-table {
+    display: flex;
+    p {
+        margin-right: 50px;
+    }
+}
+.profil-mini-gallery {
+    width: 47.5vw;
+}
+.profil-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 10px;
+    img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+    }
+    .profil-grid-item-1  {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 250px;
+        height: 250px;
+    }
+    .profil-grid-item-2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 250px;
+        height: 250px;
+    }
+    .profil-grid-item-3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 250px;
+        height: 510px;
+    }
+    .profil-grid-item-4 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 510px;
+        height: 250px;
+    }
+    .profil-grid-item-5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 250px;
+        height: 250px;
+    }
+    .profil-grid-item-6 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.p-news {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.profil .gallery-section {
+    margin-top: 150px;
+}
