@@ -8,7 +8,7 @@
         border-radius: 50%;
         object-position: center;
         object-fit: cover;
-        border: 4px solid white;
+        border: 3px solid white;
         top :30vh;
         left: 10vw;
     }
@@ -21,19 +21,33 @@
 }
 .profil-infos {
     margin-top: 50px;
-    width: 27.5vw;
-    
+    width: 25vw;
+    span {
+        color:orange ;
+    }
+    h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: black;
+    }
     .profil-description {
         margin-top: 50px;
         margin-bottom: 50px;
         text-align: justify;
         line-height: 1.4;
+        font-family: "Roboto", sans-serif;
     }
+}
+.p-social {
+    i {color: orange;}
 }
 .p-infos-table {
     display: flex;
+    i{color: orange;}
     p {
         margin-right: 50px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
     }
 }
 .profil-mini-gallery {

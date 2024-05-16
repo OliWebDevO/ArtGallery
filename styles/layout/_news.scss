@@ -1,0 +1,127 @@
+.news-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    h2 {
+        margin-top: 0;
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: orange;
+    }
+    h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        color: orange;
+    }
+    span {
+        font-family: "Playfair Display", serif;
+    }
+    
+}
+.news-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 45vw;
+    margin-right: 2.5vw;
+    a {
+        text-decoration: none;
+        color: orange;
+    }
+}
+.news-side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 30vw;
+    margin-left: 2.5vw;
+    margin-top: 55px; 
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+        text-decoration: none;
+        li {
+            margin-bottom: 10px;
+        }
+       a { 
+        font-family: "Roboto", sans-serif;
+        font-weight:400;
+        color: black;
+        transition: ease-in-out .3s;
+        &:hover {
+            transition: ease-in-out .3s;
+            color: rgba(255, 166, 0, 0.778);
+        }
+    }
+
+    }
+}
+.news_post_image {
+    margin-top: 75px; 
+    margin-bottom: 40px;
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height:40vh;
+        border-radius: 5px;
+    }
+}
+.news_big {
+   img {
+    height:80vh;
+    } 
+}
+.news_post_top {
+    display: flex;
+}
+.news_post_date {
+    background-color: orange;
+    margin-right: 3vw;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+}
+.news_post_text {
+    margin: 50px 0;
+    text-align: justify;
+    line-height: 1.8;
+    font-family: "Roboto", sans-serif;
+}
+
+.news_post_button{
+   a {color: white;} 
+   width: 200px;
+}
+.latest_post_image {
+    height: 100px;
+    width:30vw;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+.latest_post {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+.latest_post_title {
+    margin-bottom: 5px;
+    a {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+    }
+}
+.latest_post_meta {
+   margin-bottom: 30px;
+    a {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+    }
+}
