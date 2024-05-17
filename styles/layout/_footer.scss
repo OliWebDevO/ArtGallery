@@ -26,10 +26,13 @@ footer {
     transition: ease-in-out .3s;
 }
 }
+
 .f-social {
     i {
         font-size: 18px;
         transition: ease-in-out .5s;
+        color: orange;
+        padding: 5px;
     }
     i:hover {
         color: rgba(255, 166, 0, 0.506);

@@ -1,0 +1,100 @@
+.list-artist {
+    margin-top: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.list-info-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+}
+.l-user-img {
+width: 100px;
+height: 100px;
+object-fit: cover;
+object-position: center;
+border-radius: 50%;
+margin-right: 30px;
+}
+.l-black-line {
+    height: 100px;
+    width: 3px;
+    background-color: black;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.list-infos {
+    height: 100px;
+    width: 25vw;
+    span {
+        color:orange ;
+    }
+    h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: black;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+}
+
+.l-infos-table {
+    display: flex;
+    i{color: orange;}
+    p {
+        margin-right: 20px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+    }
+}
+.list-mini-gallery {
+    width: 47.5vw;
+}
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 10px;
+    img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+    }
+    .list-grid-item-1  {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 150px;
+        height: 150px;
+    }
+    .list-grid-item-2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 150px;
+        height: 150px;
+    }
+    .list-grid-item-3 {
+        grid-column: 2 / 3 ;
+        grid-row: 1 / 3;
+        width: 150px;
+        height: 310px;
+    }
+    .list-grid-item-4 {
+        grid-column: 3/5;
+        grid-row: 1/2;
+        width: 310px;
+        height: 150px;
+    }
+    .list-grid-item-5 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        width: 150px;
+        height: 150px;
+    }
+    .list-grid-item-6 {
+        grid-column: 4/5;
+        grid-row: 2/3;
+        width: 150px;
+        height: 150px;
+    }
+}
